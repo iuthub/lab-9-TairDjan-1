@@ -1,8 +1,9 @@
 <?php
 
+use App\Tag;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class TagSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $tagSeeder = new TagSeeder();
-        $tagSeeder->run();
+        $c = new Tag(['name'=>'nameFromSeeder']);
+        $c->save();
     }
 }
